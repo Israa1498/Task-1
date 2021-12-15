@@ -1,0 +1,631 @@
+
+/* body */
+body {
+  min-height: 100vh;
+  padding: 0;
+  background-color: rgb(247, 243, 232);
+  font-family: Arial Rounded MT ;
+}
+
+
+
+/* Header */
+.head-left{
+  left: 10%;
+  position: relative;
+}
+  .parallelogramLeft1{
+  width: 100%; 
+  height: 59px; 
+  right: 44%;
+  top: 20px;
+  position: absolute;
+  background: #2c4075;
+  margin: 0 auto;
+  clip-path: polygon(0 0, 100% 0%, 96% 100%, 0% 100%);
+}
+.header {
+  padding: 0px;
+  height: 20%;
+}
+.head-h1{
+  right: 18%;
+  top: 20px;
+  margin: 0;
+  position: absolute;
+color: #0e88b8;
+font-size: 25px;
+
+}
+.image2{
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right:4%;
+  top: 8px;
+  border-radius: 10%;
+}
+.head-text{
+  left: 32%;
+  top: 25px;
+  position: absolute;
+
+color: #ffffff;
+}
+.parallelogramRight {
+  width: 33%; 
+  height: 59px; 
+  bottom: 146;
+  position: relative;
+  background: #ffffff;
+  clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+}
+  .parallelogramLeft {
+    width: 100%; 
+    height: 170px; 
+    right: 47%;
+    top: -70px;
+    position: relative;
+    background: #0e9ea3;
+    margin: 0 auto;
+    clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+}
+
+.image1{
+  width: 125px;
+  height: 125px;
+  left: 10%;
+  position: absolute;
+  top: 29px;
+  border-radius: 2%;
+}
+.task-h2{
+  padding: 0%;
+  margin: 0%;
+  font-size: 20px;
+  
+}
+.task-h3{
+  padding: 0%;
+  margin: 0%;
+  font-size: 20px;
+}
+
+/* To do List header */
+.date{
+  padding-bottom: 15%;
+}
+ .day-num{
+  text-align: left;
+  font-size: 40px;
+  left: 39%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 39%;
+       }
+       .month{
+        text-align: left;
+        left: 44%;
+        position: absolute;
+        font-size: 15px;
+        top: 40%;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+       }
+       .year{
+        text-align: left;
+        left: 44%;
+        top: 43%;
+        position: absolute;
+        font-size: 15px;
+        margin: 0px;
+        padding: 0px;
+
+       }
+       .day{
+        text-align: right;
+        right: 38%;
+        top: 41%;
+        font-weight: 13pt;
+        position: absolute;
+        font-size: 17px;
+        margin: 0px;
+        padding: 0px;
+       }
+
+  .to-do-list{
+    background: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+    margin-top: 0%;
+    width: 28%;
+    height: 70%;
+    padding: 10;
+  }
+
+
+  .button {
+    background-color: #04AA6D; 
+    border: none;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 100%;
+    position: relative;
+    right: 47%;
+    top: 80%;
+  }
+
+/* ----------- List ----------- */
+
+.tasks-lists {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -11px;
+  padding: 10px 4px;
+  width: 19px;
+  height: 3px;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent; 
+}
+
+.tasks-lists:before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 6px #8c959d, 0 -6px #8c959d;
+  box-shadow: 0 6px #8c959d, 0 -6px #8c959d;
+}
+
+.tasks-list-item {
+  display: block;
+  line-height: 24px;
+  padding: 12px 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tasks-list-item + .tasks-list-item {
+  border-top: 1px solid #ffffff;
+}
+
+.tasks-list-cb {
+  display: none;
+}
+
+.tasks-list-mark {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c4cbd2;
+  border-radius: 12px;
+}
+
+.tasks-list-mark:before {
+  content: '';
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -6px;
+  height: 4px;
+  width: 8px;
+  border: solid #39ca74;
+  border-width: 0 0 4px 4px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.tasks-list-cb:checked ~ .tasks-list-mark {
+  border-color: #39ca74;
+}
+
+.tasks-list-cb:checked ~ .tasks-list-mark:before {
+  display: block;
+}
+
+.tasks-list-desc {
+  font-weight: bold;
+  color: #000000;
+left: 40%;
+text-align: left;
+position: absolute;
+}
+
+.tasks-list-cb:checked ~ .tasks-list-desc {
+  color: #8a9a9b; }
+ 
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .to-do-list{
+        background: #ffffff;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10%;
+        margin-top: 0%;
+        width: 50%;
+        height: 70%;
+        padding: 10;
+      }
+    .header{
+      height: 20%;
+    }
+    .head-h1 {
+      right: 33%;
+      top: 20px;
+      margin: 0;
+      position: absolute;
+      color: #0e88b8;
+      font-size: 20px;
+  }
+  .task-h3 {
+    padding: 0%;
+    margin: 0%;
+    font-size: 17px;
+}
+  .head-text {
+    left: 14%;
+    top: 25px;
+    position: absolute;
+    color: #ffffff;
+    font-size: 16pt;
+}.image1 {
+  width: 120px;
+  height: 120px;
+  left: -9%;
+  position: absolute;
+  top: 29px;
+  border-radius: 2%;
+}
+
+.day-num {
+  text-align: left;
+  font-size: 40px;
+  left: 29%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 38%;
+}
+.month{
+
+    text-align: left;
+    left: 40%;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    top: 39%;
+
+   }
+  
+   .year {
+    text-align: left;
+    left: 40%;
+    position: absolute;
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+    top: 42%;
+}
+.day {
+  text-align: right;
+  right: 30%;
+  font-weight: 13pt;
+  position: absolute;
+  font-size: 17px;
+  margin: 0px;
+  padding: 0px;
+  top: 40%;
+}
+
+.tasks-list-desc {
+  font-weight: bold;
+  color: #000000;
+  left: 30%;
+  text-align: left;
+  position: absolute;
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 100%;
+  position: relative;
+  right: 44%;
+  top: 80%;
+}
+  }
+
+
+ /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 767px) and (max-width: 800px) { 
+    
+    .to-do-list{
+      background: #ffffff;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 10%;
+      margin-top: 0%;
+      width: 46%;
+      height: 70%;
+      padding: 10;
+    }
+    .tasks-list-desc {
+      font-weight: bold;
+      color: #000000;
+      left: 32%;
+      text-align: left;
+      position: absolute;
+  }
+  .image1 {
+    width: 125px;
+    height: 125px;
+    left: -5%;
+    position: absolute;
+    top: 29px;
+    border-radius: 2%;
+}
+.head-text {
+  left: 17%;
+  top: 25px;
+  position: absolute;
+  color: #ffffff;
+}
+
+.head-h1 {
+  right: 28%;
+  top: 20px;
+  margin: 0;
+  position: absolute;
+  color: #0e88b8;
+  font-size: 24px;
+}
+
+.header {
+  padding: 0px;
+  height: 20%;
+}
+   
+   .day-num {
+    text-align: left;
+    font-size: 40px;
+    left: 31%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 40%;
+}
+.month {
+  text-align: left;
+  left: 38%;
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  top: 41%;
+}
+.year {
+  text-align: left;
+  left: 38%;
+  top: 44%;
+  position: absolute;
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+.day {
+  text-align: right;
+  right: 30%;
+  top: 41%;
+  font-weight: 13pt;
+  position: absolute;
+  font-size: 17px;
+  margin: 0px;
+  padding: 0px;
+}
+}
+  
+ /* Large devices (desktops, 992px and up) */
+  @media (min-width: 801px) and (max-width: 1199px) { 
+    .to-do-list{
+      background: #ffffff;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 10%;
+      margin-top: 0%;
+      width: 37%;
+      height: 70%;
+      padding: 10;
+    }
+    .tasks-list-desc {
+      font-weight: bold;
+      color: #000000;
+      left: 35%;
+      text-align: left;
+      position: absolute;
+  }
+  .image1 {
+
+    left: 1%;
+}
+.head-text {
+  left: 24%;
+
+}
+.head-h1 {
+  right: 23%;
+
+}
+.day-num {
+  text-align: left;
+  font-size: 40px;
+  left: 34%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 39%;
+}
+.month {
+  text-align: left;
+  left: 40%;
+  position: absolute;
+  font-size: 15px;
+  top: 40%;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+.year {
+  text-align: left;
+  left: 40%;
+  top: 43%;
+  position: absolute;
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+.day {
+  text-align: right;
+  right: 34%;
+  top: 41%;
+  font-weight: 13pt;
+  position: absolute;
+  font-size: 17px;
+  margin: 0px;
+  padding: 0px;
+}
+   }
+  
+    /* Smaller devices */
+  @media (max-width: 575px) { 
+    .to-do-list {
+      background: #ffffff;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 10%;
+      margin-top: 0%;
+      width: 55%;
+      height: 70%;
+      padding: 10;
+  }
+  .image1 {
+    width: 125px;
+    height: 125px;
+    left: -9%;
+    position: absolute;
+    top: 29px;
+    border-radius: 2%;
+}
+
+.head-text {
+  left: 6%;
+  top: 25px;
+  position: absolute;
+  color: #ffffff;
+}
+.tasks-list-desc {
+  font-weight: bold;
+  color: #000000;
+  left: 28%;
+  text-align: left;
+  position: absolute;
+}
+
+.head-h1 {
+  right: 33%;
+  top: 20px;
+  margin: 0;
+  position: absolute;
+  color: #0e88b8;
+  font-size: 19px;
+}
+.day-num {
+  text-align: left;
+  font-size: 40px;
+  left: 26%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 39%;
+}
+.day {
+  text-align: right;
+  right: 29%;
+  top: 41%;
+  font-weight: 13pt;
+  position: absolute;
+  font-size: 17px;
+  margin: 0px;
+  padding: 0px;
+}
+.month {
+  text-align: left;
+  left: 37%;
+  position: absolute;
+  font-size: 15px;
+  top: 40%;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+.year {
+  text-align: left;
+  left: 37%;
+  top: 43%;
+  position: absolute;
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+.button{
+  right: 44%;
+}
+  }
+
+
+
